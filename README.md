@@ -1,3 +1,4 @@
 # AWS-youtube-videos-data-pipeline-DE
-## Proect Architecture
+
+## Project Architecture
 ![project architecture](architecture.jpeg)
