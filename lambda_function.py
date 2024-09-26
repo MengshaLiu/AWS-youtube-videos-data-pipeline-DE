@@ -108,6 +108,6 @@ def lambda_handler(event,context):
         next_page_token = video_data_page.get("nextPageToken", None)
         next_page_token = f"&pageToken={next_page_token}&" if next_page_token is not None else next_page_token
     print(video_df.dtypes)
-    video_df.to_csv('video_data_page.csv')
+    write_to_file(video_df, country_code)
 
 lambda_handler('event','context')
