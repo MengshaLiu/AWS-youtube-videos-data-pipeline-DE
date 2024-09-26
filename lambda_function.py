@@ -22,6 +22,7 @@ def api_request(country_code, api_key, next_page_token):
     if request.status_code == 429:
         print("Temp-Banned due to excess requests, please wait and continue later")
         sys.exit()
+      
     return request.json()
 
 unsafe_characters = ['\n', '"']
@@ -29,6 +30,7 @@ def prepare_feature(feature):
     # Removes any character from the unsafe characters list and surrounds the whole item in quotes
     for ch in unsafe_characters:
         feature = str(feature).replace(ch, "")
+      
     return f'{feature}'
 
 def get_videos(items):
@@ -39,6 +41,7 @@ def get_videos(items):
                     "categoryId"]
 
     lines = []
+  
     for video in items:
         comments_disabled = False
         ratings_disabled = False
@@ -84,15 +87,18 @@ def get_videos(items):
                                                                      comment_count, thumbnail_link, comments_disabled,
                                                                        ratings_disabled, description]]
         lines.append(line)
+      
     return lines
 
 def write_to_file(video_data_df,country_code):
     wr.s3.to_parquet(df=video_data_df, path=f"s3://youtube-trending-vidoe-project/landing/{country_code}_Youtube_trending_videos/{time.strftime('%y.%d.%m')}_{country_code}_videos.parquet")
     print(f"successfully upload {country_code}_Youtube_trending_videos/{time.strftime('%y.%d.%m')}_{country_code}_videos to s3")
+  
 def lambda_handler(event,context):
     next_page_token = '&'
     video_df = pd.DataFrame(columns=header)
-    while next_page_token is not None:
+    
+  while next_page_token is not None:
         video_data_page = api_request(country_code, 'AIzaSyAEXSs2Ngr8pkzgaD27Seab_VUtZHKeLU8',next_page_token)
         items = video_data_page['items']
         page_data = get_videos(items)
@@ -102,5 +108,5 @@ def lambda_handler(event,context):
         next_page_token = f"&pageToken={next_page_token}&" if next_page_token is not None else next_page_token
     print(video_df.dtypes)
     video_df.to_csv('video_data_page.csv')
-    #write_to_file(video_df,country_code)
+
 lambda_handler('event','context')
