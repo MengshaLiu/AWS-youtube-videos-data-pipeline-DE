@@ -26,6 +26,7 @@ def api_request(country_code, api_key, next_page_token):
     return request.json()
 
 unsafe_characters = ['\n', '"']
+
 def prepare_feature(feature):
     # Removes any character from the unsafe characters list and surrounds the whole item in quotes
     for ch in unsafe_characters:
