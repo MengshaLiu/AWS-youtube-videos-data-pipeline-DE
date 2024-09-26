@@ -100,7 +100,7 @@ def lambda_handler(event,context):
     video_df = pd.DataFrame(columns=header)
     
   while next_page_token is not None:
-        video_data_page = api_request(country_code, 'AIzaSyAEXSs2Ngr8pkzgaD27Seab_VUtZHKeLU8',next_page_token)
+        video_data_page = api_request(country_code, 'Youtube_API_Token',next_page_token)
         items = video_data_page['items']
         page_data = get_videos(items)
         page_video_df = pd.DataFrame(data = page_data, columns=header)
