@@ -29,7 +29,7 @@ This project consists of several critical components:
 ## Results
 ### Sample Output ([Check the `output/` folder for the full sample data](data/))
 This sample output contains data based on YouTube's top 200 trending videos in the AU market collected daily throughout November 2023. 
-![sample output](output/sample-data.jpeg)
+![sample output](output/sample-data-screenshot.png)
 ### Visualization (using sample data)
 #### Dashboard 1: Analysis of Daily Trending Video Categories (November 2023)
 <p align="center">
