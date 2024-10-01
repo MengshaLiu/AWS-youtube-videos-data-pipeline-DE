@@ -27,7 +27,7 @@ This project consists of several critical components:
 - **Amazon Quicksight**: Used for visualization and generating reports.
 
 ## Results
-### Sample Output ([Check the `data/` folder for the full sample data](data/))
+### Sample Output ([Check the `output/` folder for the full sample data](data/))
 This sample output contains data based on YouTube's top 200 trending videos in the AU market collected daily throughout November 2023. 
 ![sample output](sample-data.jpeg)
 ### Visualization (using sample data)
