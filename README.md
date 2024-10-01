@@ -25,4 +25,21 @@ This project consists of several critical components:
 - **Amazon Athena (optional)**: Enabling efficient querying and analysis of data stored in S3.
 - **Amazon Quicksight**: Used for visualization and generating reports.
 
+## Results
+### Sample Output (Check data/ folder to view the full sample data)
+This sample output contains data based on YouTube's top 200 trending videos in the AU market collected daily throughout November 2023. 
+![sample output](sample-data.jpeg)
+### Visualization (using sample data)
+#### Dashboard 1: Analysis of Daily Trending Video Categories (November 2023)
+![dashboards1](visualisation/Dashboards-01.jpeg)
+- The stacked area chart shows the number of trending videos in each category daily for November 2023. Categories like Gaming, Entertainment, and Sports consistently dominate the daily trends, while categories such as Education, Science & Technology, and Film & Animation have lower numbers but show relatively stable trends over the month.
+- The stacked bar chart displays the average daily view counts for each category. Categories like Music and Entertainment show high view counts, suggesting these categories have strong daily audience exposure and attract the most attention.
+<br>
+#### Dashboard 2: Engagement Metrics by Video Category (November 2023)
+![dashboards1](visualisation/Dashboards-02.jpeg)
+- The blue bar chart shows average video view counts per category. Music and Entertainment lead with the highest average views (approaching 9-10 million), followed by Science & Technology (around 4.56 million) and Film & Animation (around 3.6 million). Autos & Vehicles and Travel & Events have the lowest views (under 1 million).
+- The green bar chart shows the average video likes per category. Music and Entertainment are the top categories for likes-clicking, closely followed by Film & Animation. Lower engagement in terms of likes is seen in categories such as Sports and News & Politics.
+- The orange bar chart shows the average video comments per category. Music has the highest number of average comments which is far more than other categories, indicating strong video engagement. Entertainment and Film & Animation also receive high comment counts. Categories like News & Politics and Autos & Vehicles have fewer comments, indicating lower interaction.
+- Based on the three engagement metrics, music, entertainment, and film & animation are the top 3 categories showing strong user engagement and interactions.
 
+#### Dashboards 3: 
