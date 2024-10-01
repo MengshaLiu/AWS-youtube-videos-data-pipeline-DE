@@ -21,6 +21,7 @@ This project consists of several critical components:
 - **AWS Lambda**: Executes the scraper application daily to automatically extract data from the YouTube API.
 - **Amazon S3**: Acts as a data lake for storing raw, transformed, and curated datasets separately.
 - **Crawler** automatically infers schema information of the data and integrates it into AWS Glue Data Catalog
+- **AWS DateBrew** Used to conduct data profiling and data quality check
 - **AWS Glue**: Facilitates a serverless ELT workflow for data transformation and loading into the target database.
 - **Amazon Athena (optional)**: Enabling efficient querying and analysis of data stored in S3.
 - **Amazon Quicksight**: Used for visualization and generating reports.
