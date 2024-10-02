@@ -3,7 +3,6 @@
 ## Table of Contents
 - [Introduction](#introduction)
 - [Architecture](#architecture)
-- [Technologies Used](#technologies-used)
 - [Data Source](#data-source)
 - [Highlighted Features](#highlighted-features)
 - [Results](#results)
@@ -17,15 +16,19 @@ The objective of this project is to develop an automated data pipeline to proces
 ![project architecture](architecture.jpeg)
 
 This project consists of several critical components:
-- **Data Source**: Utilizes the YouTube API to retrieve trending video data.
-- **AWS Lambda**: Executes the scraper application daily to automatically extract data from the YouTube API.
+- **Data Source**: retrieve a list of the most popular videos for the day based on a specified country code. The API provides metadata such as video titles, view counts, likes, comments, and categories, allowing for detailed analysis of trending content.
+- **AWS Lambda**: Served as a scraper application to automatically extract data from the YouTube API on a scheduled basis.
+- **AWS EventBridge**  Used to schedule and trigger the Lambda function on a daily basis, eliminating the need for manual intervention.
 - **Amazon S3**: Acts as a data lake for storing raw, transformed, and curated datasets separately.
 - **Crawler** automatically infers schema information of the data and integrates it into AWS Glue Data Catalog
 - **AWS DateBrew** Used to conduct data profiling and data quality check
 - **AWS Glue**: Facilitates a serverless ELT workflow for data transformation and loading into the target database.
-- **Amazon Athena (optional)**: Enabling efficient querying and analysis of data stored in S3.
+- **Amazon Athena (optional)**: Enables efficient querying and analysis of data stored in S3.
 - **Amazon Quicksight**: Used for visualization and generating reports.
 
+## Data Source
+- **Youtube Data API**: enables developers to interact programmatically with YouTube data. Common use cases include fetching video details, accessing trending content, searching for specific channels, and analyzing user interactions. In this project, [videos.list](https://developers.google.com/youtube/v3/docs/videos/list) function is used to retrieve detailed information about a list of daily trending videos.
+- 
 ## Results
 ### Sample Output ([Check the `output/` folder for the full sample data](data/))
 This sample output contains data based on YouTube's top 200 trending videos in the AU market collected daily throughout November 2023. 
