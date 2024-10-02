@@ -6,7 +6,7 @@
 - [Data Source](#data-source)
 - [Highlighted Features](#highlighted-features)
 - [Results](#results)
-- [How to Run](#how-to-run)
+- [Further Developing Opportunities](#further-developing-opportunities)
 - [Contact](#contact)
 
 ## Introduction
@@ -28,13 +28,21 @@ This project consists of several critical components:
 
 ## Data Source
 - **Youtube Data API**: enables developers to interact programmatically with YouTube data. Common use cases include fetching video details, accessing trending content, searching for specific channels, and analyzing user interactions. In this project, [videos.list](https://developers.google.com/youtube/v3/docs/videos/list) function is used to retrieve detailed information about a list of daily trending videos.
-- 
+
+## Highlighted Feature
+- **Cloud-based ELT**
+- **Consistent and High-Quality Data** Utilize Databrew's data profiling and quality check functions to ensure data consistency.
+- **managed Data Schema** 
+- **Automated ELT Pipeline** Developed an ELT pipeline that automatically ingested, loaded, and transformed data from YouTube Data API to the target cloud data storage.
+- **flawless workflow management** 
 ## Results
 ### Sample Output ([Check the `output/` folder for the full sample data](data/))
 This sample output contains data based on YouTube's top 200 trending videos in the AU market collected daily throughout November 2023. 
 ![sample output](output/sample-data-screenshot.png)
 ### Visualization (using sample data)
-#### Dashboard 1: Analysis of Daily Trending Video Categories (November 2023)
+The visualisations below provide a comprehensive analysis of YouTube trending videos, emphasizing video categories during November 2023. The findings are presented through three dashboards, each focusing on distinct aspects: daily performance, engagement metrics, and video duration of various trending video categories.
+#### Dashboard 1: Analysis of Daily Performance by Video Categories (November 2023)
+
 <p align="center">
 <img src="visualisation/Dashboards-01.jpeg" alt="drawing" width="700" align="top"/>
 </p>
@@ -63,3 +71,21 @@ This sample output contains data based on YouTube's top 200 trending videos in t
 - The bar chart breaks down video counts by category and trending duration. The Gaming and Entertainment categories dominate in trending counts, with a large portion trending for 6-10 days.
 Other categories such as Sports, Music, and People & Blogs also trend frequently but with shorter durations.
 Categories like Pets & Animals and Travel & Events have fewer trending durations, primarily trending for just 1-2 days, reflecting lower audience reach and engagement.
+
+## Further Developing Opportunities
+1. **Trend Analysis**
+- Track the performance of various video categories over time to spot emerging trends. Understand seasonal or event-based spikes in certain content categories, like Sports during major events.
+2. **Metadata Optimization**
+- Analyze the titles, descriptions, and tags used by trending videos and identify high-performing keywords and tag strategies for better searching visibility. 
+3. **Audience Sentiment and Engagement**
+- Analyze comments and engagement metrics to access viewer sentiment of YouTube videos. Determine the sentiment distribution (positive, neutral, negative) to understand public opinion on the videos to help improve the video content in the future.
+4. **Competitive Analysis for Influencers**
+- Monitor competitors' channels that consistently trend and analyze the types of content they publish. Benchmark against competitors by identifying key factors—such as video categories, tags, length, titles, and publish time that contribute to their success.
+5. Advertising 
+Purpose: Identify the best-performing video categories and trending themes for placing targeted ads.
+	•	Insights: Choose the most suitable categories and creators to maximize ad effectiveness based on audience preferences.
+
+## Contact
+For any questions or collaborations, feel free to reach out via:
+- LinkedIn(https://linkedin.com/in/melissa-liu-b31892180)
+- GitHub (https://github.com/MengshaLiu)
