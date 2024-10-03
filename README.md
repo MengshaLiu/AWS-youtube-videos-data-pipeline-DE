@@ -20,8 +20,8 @@ This project consists of several critical components:
 - **AWS Lambda**: Served as a scraper application to automatically extract data from the YouTube API on a scheduled basis.
 - **AWS EventBridge**  Used to schedule and trigger the Lambda function on a daily basis, eliminating the need for manual intervention.
 - **Amazon S3**: Acts as a data lake for storing raw, transformed, and curated datasets separately.
-- **Crawler** automatically infers schema information of the data and integrates it into AWS Glue Data Catalog
-- **AWS DateBrew** Used to conduct data profiling and data quality check
+- **Crawler** automatically infers schema information of the data and integrates it into the AWS Glue Data Catalog.
+- **AWS DateBrew** Used to conduct data profiling and data quality checks.
 - **AWS Glue**: Facilitates a serverless ELT workflow for data transformation and loading into the target database.
 - **Amazon Athena (optional)**: Enables efficient querying and analysis of data stored in S3.
 - **Amazon Quicksight**: Used for visualization and generating reports.
@@ -46,6 +46,7 @@ The visualisations below provide a comprehensive analysis of YouTube trending vi
 <p align="center">
 <img src="visualisation/Dashboards-01.jpeg" alt="drawing" width="700" align="top"/>
 </p>
+
 - The stacked area chart shows the number of trending videos in each category daily for November 2023. Categories like Gaming, Entertainment, and Sports consistently dominate the daily trends, while categories such as Education, Science & Technology, and Film & Animation have lower numbers but show relatively stable trends over the month.
 - The stacked bar chart displays the average daily view counts for each category. Categories like Music and Entertainment show high view counts, suggesting these categories have strong daily audience exposure and attract the most attention.
 <br>
