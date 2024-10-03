@@ -27,14 +27,17 @@ This project consists of several critical components:
 - **Amazon Quicksight**: Used for visualization and generating reports.
 
 ## Data Source
-- **Youtube Data API**: enables developers to interact programmatically with YouTube data. Common use cases include fetching video details, accessing trending content, searching for specific channels, and analyzing user interactions. In this project, [videos.list](https://developers.google.com/youtube/v3/docs/videos/list) function is used to retrieve detailed information about a list of daily trending videos.
+- **Youtube Data API**: enables developers to interact programmatically with YouTube data. Common use cases include fetching video details, accessing trending content, searching for specific channels, and analyzing user interactions. In this project, [videos.list](https://developers.google.com/youtube/v3/docs/videos/list) method is called to retrieve detailed information about a list of daily trending videos.
 
 ## Highlighted Feature
-- **Cloud-based ELT**
-- **Consistent and High-Quality Data** Utilize Databrew's data profiling and quality check functions to ensure data consistency.
-- **managed Data Schema** 
-- **Automated ELT Pipeline** Developed an ELT pipeline that automatically ingested, loaded, and transformed data from YouTube Data API to the target cloud data storage.
-- **flawless workflow management** 
+- **Cloud-Based ETL** Built a scalable and serverless ELT solution with high-cost efficiency.  
+- **Consistent and High-Quality Data** Utilize Databrew's data profiling and quality check functions to ensure data consistency and integrity.
+- **Built-In Data Catalog** Used a centralized data catalogue, which automatically catalogues metadata and creates schema for the data source.
+- **Incremental ETL**: Built-in job bookmarking keeps track of previously processed data, which reduces processing time and cost.
+- **Orchestration and Automation** Developed an ELT pipeline that automatically ingested, loaded, and transformed data from YouTube Data API to the target cloud data storage.
+- **flawless workflow management** With Glue Workflows and Triggers, ETL jobs are easily scheduled and automated.
+- **Error Handling & Logging:** Built-in logging and monitoring provide real-time insights into ETL job performance and potential issues.
+
 ## Results
 ### Sample Output ([Check the `output/` folder for the full sample data](data/))
 This sample output contains data based on YouTube's top 200 trending videos in the AU market collected daily throughout November 2023. 
@@ -79,12 +82,11 @@ Categories like Pets & Animals and Travel & Events have fewer trending durations
 2. **Metadata Optimization**
 - Analyze the titles, descriptions, and tags used by trending videos and identify high-performing keywords and tag strategies for better searching visibility. 
 3. **Audience Sentiment and Engagement**
-- Analyze comments and engagement metrics to access viewer sentiment of YouTube videos. Determine the sentiment distribution (positive, neutral, negative) to understand public opinion on the videos to help improve the video content in the future.
+- Analyze comments and engagement metrics to access viewer sentiment of YouTube videos. Determine the sentiment distribution (positive, neutral, negative) to understand public opinion on the videos and help improve the video content in the future.
 4. **Competitive Analysis for Influencers**
 - Monitor competitors' channels that consistently trend and analyze the types of content they publish. Benchmark against competitors by identifying key factors—such as video categories, tags, length, titles, and publish time that contribute to their success.
-5. Advertising 
-Purpose: Identify the best-performing video categories and trending themes for placing targeted ads.
-	•	Insights: Choose the most suitable categories and creators to maximize ad effectiveness based on audience preferences.
+5. **Marketing Strategy for Advertisers**
+Identify the best-performing video categories and trending themes for placing targeted ads, and choose the most suitable categories and creators based on the video's visibility and engagement to maximize ad effectiveness.
 
 ## Contact
 For any questions or collaborations, feel free to reach out via:
